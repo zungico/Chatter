@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		804F398A29A9DAA3003E6994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F398929A9DAA3003E6994 /* AppDelegate.swift */; };
 		804F398C29A9DAA3003E6994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F398B29A9DAA3003E6994 /* SceneDelegate.swift */; };
-		804F398E29A9DAA3003E6994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F398D29A9DAA3003E6994 /* ViewController.swift */; };
+		804F398E29A9DAA3003E6994 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F398D29A9DAA3003E6994 /* WelcomeViewController.swift */; };
 		804F399129A9DAA3003E6994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804F398F29A9DAA3003E6994 /* Main.storyboard */; };
 		804F399329A9DAA5003E6994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804F399229A9DAA5003E6994 /* Assets.xcassets */; };
 		804F399629A9DAA5003E6994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804F399429A9DAA5003E6994 /* LaunchScreen.storyboard */; };
+		804F399E29AA4A9C003E6994 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F399D29AA4A9C003E6994 /* ChatViewController.swift */; };
+		804F39A029AA4AAF003E6994 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F399F29AA4AAF003E6994 /* LoginViewController.swift */; };
+		804F39A229AA4AC0003E6994 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F39A129AA4AC0003E6994 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		804F398629A9DAA3003E6994 /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804F398929A9DAA3003E6994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		804F398B29A9DAA3003E6994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		804F398D29A9DAA3003E6994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		804F398D29A9DAA3003E6994 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		804F399029A9DAA3003E6994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		804F399229A9DAA5003E6994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		804F399529A9DAA5003E6994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		804F399729A9DAA5003E6994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		804F399D29AA4A9C003E6994 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		804F399F29AA4AAF003E6994 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		804F39A129AA4AC0003E6994 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		804F398829A9DAA3003E6994 /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
-				804F398929A9DAA3003E6994 /* AppDelegate.swift */,
-				804F398B29A9DAA3003E6994 /* SceneDelegate.swift */,
-				804F398D29A9DAA3003E6994 /* ViewController.swift */,
-				804F398F29A9DAA3003E6994 /* Main.storyboard */,
+				804F39A329AA4ACE003E6994 /* Applications */,
+				804F39A429AA4AE1003E6994 /* Controller */,
+				804F39A529AA4AEC003E6994 /* View */,
 				804F399229A9DAA5003E6994 /* Assets.xcassets */,
 				804F399429A9DAA5003E6994 /* LaunchScreen.storyboard */,
 				804F399729A9DAA5003E6994 /* Info.plist */,
 			);
 			path = Chatter;
+			sourceTree = "<group>";
+		};
+		804F39A329AA4ACE003E6994 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				804F398929A9DAA3003E6994 /* AppDelegate.swift */,
+				804F398B29A9DAA3003E6994 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		804F39A429AA4AE1003E6994 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				804F398D29A9DAA3003E6994 /* WelcomeViewController.swift */,
+				804F39A129AA4AC0003E6994 /* RegisterViewController.swift */,
+				804F399F29AA4AAF003E6994 /* LoginViewController.swift */,
+				804F399D29AA4A9C003E6994 /* ChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		804F39A529AA4AEC003E6994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				804F398F29A9DAA3003E6994 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				804F398E29A9DAA3003E6994 /* ViewController.swift in Sources */,
+				804F398E29A9DAA3003E6994 /* WelcomeViewController.swift in Sources */,
 				804F398A29A9DAA3003E6994 /* AppDelegate.swift in Sources */,
+				804F399E29AA4A9C003E6994 /* ChatViewController.swift in Sources */,
+				804F39A229AA4AC0003E6994 /* RegisterViewController.swift in Sources */,
+				804F39A029AA4AAF003E6994 /* LoginViewController.swift in Sources */,
 				804F398C29A9DAA3003E6994 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
