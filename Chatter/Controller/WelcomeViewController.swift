@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var logoLabel: CLTypingLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        logoLabel.text = "Chatter"
         
     }
 

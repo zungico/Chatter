@@ -16,9 +16,13 @@
 		804F399E29AA4A9C003E6994 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F399D29AA4A9C003E6994 /* ChatViewController.swift */; };
 		804F39A029AA4AAF003E6994 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F399F29AA4AAF003E6994 /* LoginViewController.swift */; };
 		804F39A229AA4AC0003E6994 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F39A129AA4AC0003E6994 /* RegisterViewController.swift */; };
+		804F39A729AA57EB003E6994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804F39A629AA57EA003E6994 /* GoogleService-Info.plist */; };
+		9870A51084BB099F8E16845F /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAEDFBE47FFADA08B1D3FEF /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DAEDFBE47FFADA08B1D3FEF /* Pods_Chatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D4492CF54B4E630C7D0174C /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		804F398629A9DAA3003E6994 /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804F398929A9DAA3003E6994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		804F398B29A9DAA3003E6994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		804F399D29AA4A9C003E6994 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		804F399F29AA4AAF003E6994 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		804F39A129AA4AC0003E6994 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		804F39A629AA57EA003E6994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0E67C69DAC567DF2B17F3D8 /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9870A51084BB099F8E16845F /* Pods_Chatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E026B159B3D2C810F8CD9BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0E67C69DAC567DF2B17F3D8 /* Pods-Chatter.debug.xcconfig */,
+				7D4492CF54B4E630C7D0174C /* Pods-Chatter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		804F397D29A9DAA3003E6994 = {
 			isa = PBXGroup;
 			children = (
 				804F398829A9DAA3003E6994 /* Chatter */,
 				804F398729A9DAA3003E6994 /* Products */,
+				5E026B159B3D2C810F8CD9BB /* Pods */,
+				D04490BE7B0DD5F0B42C8FAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +86,7 @@
 				804F399229A9DAA5003E6994 /* Assets.xcassets */,
 				804F399429A9DAA5003E6994 /* LaunchScreen.storyboard */,
 				804F399729A9DAA5003E6994 /* Info.plist */,
+				804F39A629AA57EA003E6994 /* GoogleService-Info.plist */,
 			);
 			path = Chatter;
 			sourceTree = "<group>";
@@ -100,6 +119,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D04490BE7B0DD5F0B42C8FAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DAEDFBE47FFADA08B1D3FEF /* Pods_Chatter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 804F399A29A9DAA5003E6994 /* Build configuration list for PBXNativeTarget "Chatter" */;
 			buildPhases = (
+				29A736F2923D04149C73BED0 /* [CP] Check Pods Manifest.lock */,
 				804F398229A9DAA3003E6994 /* Sources */,
 				804F398329A9DAA3003E6994 /* Frameworks */,
 				804F398429A9DAA3003E6994 /* Resources */,
+				9A16373B3510E51C6BE2A5E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,12 +188,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				804F399629A9DAA5003E6994 /* LaunchScreen.storyboard in Resources */,
+				804F39A729AA57EB003E6994 /* GoogleService-Info.plist in Resources */,
 				804F399329A9DAA5003E6994 /* Assets.xcassets in Resources */,
 				804F399129A9DAA3003E6994 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A736F2923D04149C73BED0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A16373B3510E51C6BE2A5E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter/Pods-Chatter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chatter/Pods-Chatter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatter/Pods-Chatter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		804F398229A9DAA3003E6994 /* Sources */ = {
@@ -318,6 +390,7 @@
 		};
 		804F399B29A9DAA5003E6994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0E67C69DAC567DF2B17F3D8 /* Pods-Chatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +403,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +419,7 @@
 		};
 		804F399C29A9DAA5003E6994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D4492CF54B4E630C7D0174C /* Pods-Chatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -357,6 +432,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

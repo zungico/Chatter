@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jou-o5-gbj">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,13 +13,13 @@
         <!--Welcome View Controller-->
         <scene sceneID="cNx-3a-yXT">
             <objects>
-                <viewController id="DGP-jK-u7E" userLabel="Welcome View Controller" sceneMemberID="viewController">
+                <viewController id="DGP-jK-u7E" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Chatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJa-2O-2f3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixe-Ox-JUh">
-                                <rect key="frame" x="143" y="407.66666666666669" width="107" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixe-Ox-JUh" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="BrandPurple"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +70,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cZF-s8-enp"/>
+                    <connections>
+                        <outlet property="logoLabel" destination="ixe-Ox-JUh" id="eou-Um-D5j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdL-Lh-iBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +81,7 @@
         <!--Register View Controller-->
         <scene sceneID="ICK-er-cKM">
             <objects>
-                <viewController id="SmD-Pn-nIo" userLabel="Register View Controller" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="SmD-Pn-nIo" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Chatter" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3da-WM-TTr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,6 +137,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="SmD-Pn-nIo" eventType="touchUpInside" id="ZS1-NO-Tuj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" label="Email View"/>
@@ -164,7 +171,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7i4-hX-Mts"/>
                     <connections>
-                        <segue destination="gpB-RR-3WL" kind="show" id="ZUz-wo-1uU"/>
+                        <segue destination="gpB-RR-3WL" kind="show" identifier="RegisterToChat" id="ZUz-wo-1uU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfU-89-m2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,7 +181,7 @@
         <!--Login View Controller-->
         <scene sceneID="agF-em-17X">
             <objects>
-                <viewController id="7uv-6R-JLe" userLabel="Login View Controller" customClass="RegisterViewController" sceneMemberID="viewController">
+                <viewController id="7uv-6R-JLe" userLabel="Login View Controller" customClass="LoginViewController" customModule="Chatter" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ZG-4r-1rk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,7 +268,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BTN-8N-lDU"/>
                     <connections>
-                        <segue destination="gpB-RR-3WL" kind="show" id="1O4-aj-Arc"/>
+                        <segue destination="gpB-RR-3WL" kind="show" identifier="LoginToChat" id="1O4-aj-Arc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vh-gD-0oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -284,7 +291,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZH-X3-9Vo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="286" y="375"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="lTH-jt-PhL">
