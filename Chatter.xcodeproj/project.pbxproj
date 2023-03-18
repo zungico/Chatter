@@ -17,6 +17,13 @@
 		804F39A029AA4AAF003E6994 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F399F29AA4AAF003E6994 /* LoginViewController.swift */; };
 		804F39A229AA4AC0003E6994 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804F39A129AA4AC0003E6994 /* RegisterViewController.swift */; };
 		804F39A729AA57EB003E6994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804F39A629AA57EA003E6994 /* GoogleService-Info.plist */; };
+		804F39AA29AA6072003E6994 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 804F39A929AA6072003E6994 /* FirebaseAuth */; };
+		804F39AC29AA6072003E6994 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 804F39AB29AA6072003E6994 /* FirebaseFirestore */; };
+		80CF103429AA9F68001B32A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF103329AA9F68001B32A2 /* Constants.swift */; };
+		80CF103629AADB2F001B32A2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF103529AADB2F001B32A2 /* Message.swift */; };
+		80CF103A29AAE192001B32A2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF103829AAE192001B32A2 /* MessageCell.swift */; };
+		80CF103B29AAE192001B32A2 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80CF103929AAE192001B32A2 /* MessageCell.xib */; };
+		80E035C729C6628D001CF462 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 80E035C629C6628D001CF462 /* IQKeyboardManagerSwift */; };
 		9870A51084BB099F8E16845F /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAEDFBE47FFADA08B1D3FEF /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +42,10 @@
 		804F399F29AA4AAF003E6994 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		804F39A129AA4AC0003E6994 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		804F39A629AA57EA003E6994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80CF103329AA9F68001B32A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80CF103529AADB2F001B32A2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		80CF103829AAE192001B32A2 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		80CF103929AAE192001B32A2 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		B0E67C69DAC567DF2B17F3D8 /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +55,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9870A51084BB099F8E16845F /* Pods_Chatter.framework in Frameworks */,
+				80E035C729C6628D001CF462 /* IQKeyboardManagerSwift in Frameworks */,
+				804F39AA29AA6072003E6994 /* FirebaseAuth in Frameworks */,
+				804F39AC29AA6072003E6994 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,9 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				804F39A329AA4ACE003E6994 /* Applications */,
-				804F39A429AA4AE1003E6994 /* Controller */,
+				80CF103729AADB36001B32A2 /* Model */,
 				804F39A529AA4AEC003E6994 /* View */,
+				804F39A429AA4AE1003E6994 /* Controller */,
 				804F399229A9DAA5003E6994 /* Assets.xcassets */,
+				80CF103329AA9F68001B32A2 /* Constants.swift */,
 				804F399429A9DAA5003E6994 /* LaunchScreen.storyboard */,
 				804F399729A9DAA5003E6994 /* Info.plist */,
 				804F39A629AA57EA003E6994 /* GoogleService-Info.plist */,
@@ -115,8 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				804F398F29A9DAA3003E6994 /* Main.storyboard */,
+				80CF103829AAE192001B32A2 /* MessageCell.swift */,
+				80CF103929AAE192001B32A2 /* MessageCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		80CF103729AADB36001B32A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80CF103529AADB2F001B32A2 /* Message.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D04490BE7B0DD5F0B42C8FAF /* Frameworks */ = {
@@ -145,6 +171,11 @@
 			dependencies = (
 			);
 			name = Chatter;
+			packageProductDependencies = (
+				804F39A929AA6072003E6994 /* FirebaseAuth */,
+				804F39AB29AA6072003E6994 /* FirebaseFirestore */,
+				80E035C629C6628D001CF462 /* IQKeyboardManagerSwift */,
+			);
 			productName = Chatter;
 			productReference = 804F398629A9DAA3003E6994 /* Chatter.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +204,10 @@
 				Base,
 			);
 			mainGroup = 804F397D29A9DAA3003E6994;
+			packageReferences = (
+				804F39A829AA6072003E6994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				80E035C529C6628D001CF462 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 804F398729A9DAA3003E6994 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CF103B29AAE192001B32A2 /* MessageCell.xib in Resources */,
 				804F399629A9DAA5003E6994 /* LaunchScreen.storyboard in Resources */,
 				804F39A729AA57EB003E6994 /* GoogleService-Info.plist in Resources */,
 				804F399329A9DAA5003E6994 /* Assets.xcassets in Resources */,
@@ -247,8 +283,11 @@
 				804F398A29A9DAA3003E6994 /* AppDelegate.swift in Sources */,
 				804F399E29AA4A9C003E6994 /* ChatViewController.swift in Sources */,
 				804F39A229AA4AC0003E6994 /* RegisterViewController.swift in Sources */,
+				80CF103429AA9F68001B32A2 /* Constants.swift in Sources */,
+				80CF103629AADB2F001B32A2 /* Message.swift in Sources */,
 				804F39A029AA4AAF003E6994 /* LoginViewController.swift in Sources */,
 				804F398C29A9DAA3003E6994 /* SceneDelegate.swift in Sources */,
+				80CF103A29AAE192001B32A2 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +507,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		804F39A829AA6072003E6994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		80E035C529C6628D001CF462 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		804F39A929AA6072003E6994 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 804F39A829AA6072003E6994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		804F39AB29AA6072003E6994 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 804F39A829AA6072003E6994 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		80E035C629C6628D001CF462 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80E035C529C6628D001CF462 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 804F397E29A9DAA3003E6994 /* Project object */;
 }

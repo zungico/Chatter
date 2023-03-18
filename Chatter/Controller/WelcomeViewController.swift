@@ -14,8 +14,9 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoLabel.text = "Chatter"
-        
+        logoLabel.text = K.appName
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "", style: .plain, target: nil, action: nil)
     }
 
 
